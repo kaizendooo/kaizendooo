@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muroexe</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="">
+<link rel="icon" href="img/logo.gif">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="img/logo.jpg"></a>
+            <div class="nav-links">
+                <div id="dropdown">
+					<div id="dropDownContent" class="dropdown-content">
+						<a href="mens.html">Men</a>
+						<a href="womens.html">Women</a>
+						<a href="sale.html">Sale</a>
+					</div>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a id="shopBtn">Shop</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="service.html">Customer Service</a></li>
+					<li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+		
+        
+
+        <div class="text-box">
+            <h1>M U R O EXE</h1>
+            <a href="sale.html" class="hero-btn">SHOP NOW!</a>
+        
+        </div>
+
+    </section>
+
+    <!-----Collection----->
+	<div id="collection">
+		<div class="mens">
+			<div class="mens_img"></div>
+			<h1>Men's Collection</h1>
+			<a href="mens.html"></a>
+		</div>
+		<div class="womens">
+			<div class="womens_img"></div>
+			<h1>Women's Collection</h1>
+			<a href="womens.html" class=""></a>
+		</div>
+	</div>
+
+	<script>
+		window.onclick = (e) => {
+			let shopBtn = document.getElementById("shopBtn");
+			let content = document.getElementById("dropDownContent");
+			let dropdown = document.getElementById("dropdown");
+			if(shopBtn.contains(e.target))content.style.display = "block";
+			else{
+				if(!content.contains(e.target))content.style.display = "none";
+			}
+			let rect = shopBtn.getBoundingClientRect();
+			dropdown.style.left = ((rect.left+(rect.width/2)) - (dropdown.getBoundingClientRect().width / 2)) + "px";
+			dropdown.style.top = rect.bottom + "px";
+		}
+	</script>
+</body>
+</html>

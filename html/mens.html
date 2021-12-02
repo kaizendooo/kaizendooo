@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Sneakers</title>
+    <link rel="stylesheet" type="text/css" href="mens.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="img/logo.gif">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="img/logo.jpg"></a>
+            <div class="nav-links">
+                <div id="dropdown">
+					<div id="dropDownContent" class="dropdown-content">
+						<a href="mens.html">Men</a>
+						<a href="womens.html">Women</a>
+						<a href="sale.html">Sale</a>
+					</div>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a id="shopBtn">Shop</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="service.html">Customer Service</a></li>
+					<li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+ 
+ 
+        <script>
+            window.onclick = (e) => {
+                let shopBtn = document.getElementById("shopBtn");
+                let content = document.getElementById("dropDownContent");
+                let dropdown = document.getElementById("dropdown");
+                if(shopBtn.contains(e.target))content.style.display = "block";
+                else{
+                    if(!content.contains(e.target))content.style.display = "none";
+                }
+                let rect = shopBtn.getBoundingClientRect();
+                dropdown.style.left = ((rect.left+(rect.width/2)) - (dropdown.getBoundingClientRect().width / 2)) + "px";
+                dropdown.style.top = rect.bottom + "px";
+            }
+        </script>
+ 
+<!------------ Mens Sneakers ------------->
+    <nav class="mens">
+        <p>Men's Sneakers</p>
+        <div class="mens-img"></div>
+    </nav>
+ 
+ 
+        <div class="mens-categories">
+          <div class="row">
+              <div class="image-container">
+                <img src="img/AtomEternalBlack2020_perfil_1024x1024_2x.jpg" width="345" height="344">
+                <h4>Sneakers Atom Eternal 2.0 Black</h4>
+                <p>₱5,324.76</p>
+              </div>
+              <div class="image-container">
+                <img src="img/AtomEternalBlue2020_perfil_1024x1024_2x.jpg" width="345" height="344">
+                <h4>Sneakers Atom Eternal 2.0 Blue</h4>
+                <p>₱5,324.76</p>
+              </div>
+          </div>
+ 
+          <div class="row">
+              <div class="image-container">
+                <img src="img/AtomOasisWhitePerfil_1_1024x1024_2x.jpg" width="345" height="344">
+                <h4>Sneakers Atom Oasis Snow</h4>
+                <p>₱4,733.12</p>
+              </div>
+              <div class="image-container">
+                <img src="img/MarathonKnitBrownPerfil_1_1024x1024_2x.jpg" width="345" height="344">
+                <h4>Marathon Nebula Brown</h4>
+                <p>₱5,620.58</p>
+              </div>
+          </div>
+ 
+  </div>
+</body>
+</html>
