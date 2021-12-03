@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muroexe</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="">
+	<link rel="icon" href="img/logo.gif">
+	<script>
+		// PRE LOADING IMAGES //
+		let images = [
+			"AtomBootBlackPerfil_1024x1024_2x.jpg",
+			"ArmyBootBlackPerfil_1024x1024_2x.jpg",
+			"AtomEternalBlack2020_perfil_1024x1024_2x.jpg",
+			"AtomEternalBlue2020_perfil_1024x1024_2x.jpg",
+			"AtomEternalGrape2020_perfil_1024x1024_2x.jpg",
+			"AtomOasisBlackPerfil_1_1024x1024_2x.jpg",
+			"AtomOasisBlue_perfil_1024x1024_2x.jpg",
+			"AtomOasisPinkPerfil_1024x1024_2x.jpg"
+		], index = 0;
+		images.forEach(function(src){
+			let l = document.createElement("link");
+			l.rel = "preload";
+			l.href = "img/"+src;
+			l.as = "image";
+			document.head.append(l);
+		});
+	</script>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="img/logo.jpg"></a>
+            <div class="nav-links">
+                <div id="dropdown">
+					<div id="dropDownContent" class="dropdown-content">
+						<a href="mens/mens.html">Men</a>
+						<a href="womens/womens.html">Women</a>
+						<a href="sale/sale.html">Sale</a>
+					</div>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a id="shopBtn">Shop</a></li>
+                    <li><a href="about/about.html">About us</a></li>
+                    <li><a href="service/service.html">Customer Service</a></li>
+					<li><a href="login/login.html" style="color: gold">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+		
+        
+
+        <div class="text-box">
+            <h1>M U R O EXE</h1>
+            <a href="sale/sale.html" class="hero-btn">SHOP NOW!</a>
+        
+        </div>
+
+    </section>
+
+    <!-----Collection----->
+	<div id="collection">
+		<div id="mens" onclick="location.href='mens/mens.html'">
+			<div class="mens_img" id="men_img"></div>
+			<h1>Men's Collection</h1>
+		</div>
+		<div id="womens" onclick="location.href='womens/womens.html'">
+			<div class="womens_img" id="women_img"></div>
+			<h1>Women's Collection</h1>
+			<a href="womens.html" class=""></a>
+		</div>
+	</div>
+	
+	<div id="mid">
+		<div id="mid_prev">
+			<div id="min_prev_dialog">
+				<p> FINAL SALE 40%-60% </p>
+				<a href="sale/sale.html" id="sale_button">SHOP SALE</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="collage">
+		<div id="collage_mid">
+			<div class="collage_img"></div>
+			<div class="collage_img"></div>
+			<div class="collage_img"></div>
+			
+			<div class="collage_img"></div>
+			<div class="collage_img"></div>
+			<div class="collage_img"></div>
+		</div>
+	</div>
+	
+	<div id="footer">
+		<div id="footer_mid">
+			<div id="footer_title">
+				<h1 style="font-size: 2.5em; font-family : LuluBold; margin-top: 0px">MURO</h1>
+				<h1 style="font-size: 2.1em; font-family : Lulu; margin-top: 10px; margin-left: 2px">EXE</h1>
+			</div>
+			<div id="footer_bot">
+				<div id="address">
+					<h2> ADDRESS </h2>
+					<br>
+					<p>Calle de Goya, 49, 28001 <br>Madrid, Spain userexperience@muroexe.com Phone: +34 914 31 84 08 </p>
+					<div id="icon_area">
+						<a href="https://facebook.com"><img alt="facebook" src="https://static.wixstatic.com/media/23fd2a2be53141ed810f4d3dcdcd01fa.png/v1/fill/w_40,h_40,al_c,q_85,usm_0.66_1.00_0.01/23fd2a2be53141ed810f4d3dcdcd01fa.webp"></img></a>
+						<a href="https://twitter.com"><img alt="facebook" src="https://static.wixstatic.com/media/01ab6619093f45388d66736ec22e5885.png/v1/fill/w_40,h_40,al_c,q_85,usm_0.66_1.00_0.01/01ab6619093f45388d66736ec22e5885.webp"></img></a>
+						<a href="https://instagram.com"><img alt="facebook" src="https://static.wixstatic.com/media/81af6121f84c41a5b4391d7d37fce12a.png/v1/fill/w_40,h_40,al_c,q_85,usm_0.66_1.00_0.01/81af6121f84c41a5b4391d7d37fce12a.webp"></img></a>
+					</div>
+				</div>
+				<div id="contact">
+					<h2> CONTACT US </h2>
+					<div id="input_area">
+						<div id="inputs">
+							<input type="text" placeholder="Name"></input>
+							<input type="text" placeholder="Email"></input>
+							<input type="text" placeholder="Phone"></input>
+						</div>
+						<div id="message">
+							<textarea placeholder="Type your message here..."></textarea>
+							<a href="" id="submit_button">Submit</a>
+						</div>
+					</div>
+				</div>
+				<div id="stay_in_touch">
+					<h2> STAY IN TOUCH </h2>
+					<br>
+					<p>Join our mailing list</p>
+					<input type="text" placeholder="Enter your emial here*"></input>
+					<a href="" id="subscribe">Subscribe Now</a>
+				</div>
+			</div>
+			<p id="info">© Coming back from 2022, Muroexe, Paseo de los Melancólicos, 9. Madrid</p>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
